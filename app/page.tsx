@@ -1,69 +1,179 @@
-import Image from "next/image";
+import IconLink from "./components/icon-link";
+import SocialLink from "./components/social-link";
+import Window from "./components/window";
+import {
+  BirthdayCake,
+  FlagAlt,
+  Education,
+  InfoCircle,
+  HomeAlt,
+  RadioCircleMarked,
+  Link,
+  Github,
+  Instagram,
+  Youtube,
+  ArrowUpRightStroke,
+  User,
+} from "@boxicons/react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="grid grid-cols-[1fr_2fr] auto-rows-min p-5 h-screen gap-3">
+      <Window title="Informacja" icon={<InfoCircle size="sm" />}>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-4">
+            <BirthdayCake className="fill-purple-400" />
+            <span className="leading-none">19 lat</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <FlagAlt className="fill-orange-400" />
+            <span className="leading-none">Polska</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Education className="fill-yellow-400" />
+            <span className="leading-none">1 rok studiów</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Window>
+      <Window
+        title="Strona główna"
+        className="row-span-2"
+        icon={<HomeAlt size="sm" />}
+      >
+        <div className="grid grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <p>Cześć, mam na imie</p>
+            <p className="w-fit h-fit bg-text-gradient text-6xl font-bold py-1 text-transparent bg-clip-text ">
+              Maksymilian
+            </p>
+            <p>
+              Tworzę nowoczesne aplikacje webowe i mobilne.
+              <br />
+              Lubię{" "}
+              <span className="text-deep-blue">czysty kod, ładny design</span> i
+              ciągłe <span className="text-deep-blue">rozwijanie</span>
+              <br />
+              swoich umiejętności
+            </p>
+            <div className="buttons flex gap-2 my-6">
+              <IconLink
+                icon={<ArrowUpRightStroke />}
+                label="Zobacz moje projekty"
+                href="/"
+                filled
+              />
+              <IconLink icon={<User size="sm" />} label="O mnie" href="/" />
+            </div>
+          </div>
+          <div>
+            <pre>
+              <span className="text-purple-400">const</span>{" "}
+              <span className="text-deep-blue">Developer</span>
+              {" = {"}
+              <br />
+              {"        "}
+              <span className="text-purple-300">name</span>
+              {":"}
+              {"    "}
+              <span className="text-lime-500">'Maksymilian'</span>
+              {","}
+              <br />
+              {"        "}
+              <span className="text-purple-300">frameworks</span>
+              {":   [ "}
+              <span className="text-lime-500">'React'</span>
+              {", "}
+              <span className="text-lime-500">'Next.js'</span>
+              {", "}
+              <span className="text-lime-500">'Vue.js'</span>
+              {", "}
+              <span className="text-lime-500">'Flutter'</span>
+              {" ],"}
+              <br />
+              {"        "}
+              <span className="text-purple-300">languages</span>
+              {":   {"}
+              <br />
+              {"              "} <span className="text-purple-300">web</span>
+              {":   [ "}
+              <span className="text-lime-500">'JS'</span>
+              {", "}
+              <span className="text-lime-500">'TS'</span>
+              {", "}
+              <span className="text-lime-500">'CSS'</span>
+              {", "}
+              <span className="text-lime-500">'SASS'</span>
+              {", "}
+              <span className="text-lime-500">'HTML'</span>
+              {" ],"}
+              <br />
+              {"              "}{" "}
+              <span className="text-purple-300">software</span>
+              {":   [ "}
+              <span className="text-lime-500">'Dart'</span>
+              {", "}
+              <span className="text-lime-500">'C#'</span>
+              {", "}
+              <span className="text-lime-500">'Python'</span>
+              {" ],"}
+              <br />
+              {"               "}
+              <span className="text-purple-300">databases</span>
+              {":   [ "}
+              <span className="text-lime-500">'SQL'</span>
+              {" ]"}
+              <br />
+              {"        },"}
+              <br />
+              {"        "}
+              <span className="text-purple-300">editors</span>
+              {":   [ "}
+              <span className="text-lime-500">'VS Code'</span>
+              {", "}
+              <span className="text-lime-500">'Visual Studio'</span>
+              {", "}
+              <span className="text-lime-500">'Android Studio'</span>
+              {" ],"}
+              <br />
+              {"};"}
+              <br />
+              <br />
+              <span className="text-deep-blue">export</span>{" "}
+              <span className="text-purple-400">default</span>{" "}
+              <span className="text-deep-blue">Developer</span>
+              {";"}
+            </pre>
+          </div>
         </div>
-      </main>
+      </Window>
+      <Window title="Status" icon={<RadioCircleMarked />}>
+        <div className="flex gap-4">
+          <RadioCircleMarked className="fill-lime-400" />
+          <span>Dostępny</span>
+        </div>
+        <span className="text-sm text-subtle-blue">
+          Otwarty na nowe wyzwania!
+        </span>
+      </Window>
+      <Window title="Linki" icon={<Link />}>
+        <div className="flex flex-col gap-3">
+          <SocialLink
+            href="https://github.com/M0lej"
+            icon={<Github />}
+            label="M0lej"
+          />
+          <SocialLink
+            href="https://www.instagram.com/m0lej/"
+            icon={<Instagram />}
+            label="M0lej"
+          />
+          <SocialLink
+            href="https://www.youtube.com/@M0l3j"
+            icon={<Youtube />}
+            label="M0l3j"
+          />
+        </div>
+      </Window>
     </div>
   );
 }

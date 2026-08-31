@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0b26;
+  --foreground: #b6c8ff;
+  --subtle-blue: #b6c8ff;
+  --deep-blue: #6a8df7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-subtle-blue: var(--subtle-blue);
+  --color-deep-blue: var(--deep-blue);
+  --background-image-window-gradient: radial-gradient(
+    circle at left top,
+    #1c2a50 0%,
+    #121d3a 100%
+  );
+  --background-image-window-topBar-gradient: linear-gradient(
+    90deg,
+    #31437b 0%,
+    #405fbf 100%
+  );
+  --background-image-text-gradient: linear-gradient(
+    45deg,
+    #aac2ff 21%,
+    #5063ae 100%
+  );
+  --background-image-border-gradient: linear-gradient(
+    180deg,
+    #697abb 0%,
+    #31437b 100%
+  );
+  --font-sans: var(--font-albert-sans);
+  --font-mono: var(--font-albert-sans);
+  --animate-fade-in: fade-in 0.5s ease forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      scale: 0.85;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0b26;
+    --foreground: #d7e1ff;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
