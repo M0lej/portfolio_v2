@@ -1,4 +1,6 @@
+import CodeBoard from "./components/code-board/code-board";
 import IconLink from "./components/icon-link";
+import Skill from "./components/skill";
 import SocialLink from "./components/social-link";
 import Window from "./components/window";
 import {
@@ -14,38 +16,41 @@ import {
   Youtube,
   ArrowUpRightStroke,
   User,
+  CodeAlt,
+  BrushSparkles,
+  Book,
+  Tachometer,
 } from "@boxicons/react";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-[1fr_2fr] auto-rows-min p-5 h-screen gap-3">
-      <Window title="Informacja" icon={<InfoCircle size="sm" />}>
-        <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-4">
-            <BirthdayCake className="fill-purple-400" />
-            <span className="leading-none">19 lat</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <FlagAlt className="fill-orange-400" />
-            <span className="leading-none">Polska</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <Education className="fill-yellow-400" />
-            <span className="leading-none">1 rok studiów</span>
-          </div>
-        </div>
-      </Window>
+    <div className="grid grid-cols-[1fr_1fr_1fr_1fr] auto-rows-min p-5 h-screen gap-3">
       <Window
         title="Strona główna"
-        className="row-span-2"
+        className="row-span-2 col-span-4 w-full"
         icon={<HomeAlt size="sm" />}
       >
-        <div className="grid grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <p>Cześć, mam na imie</p>
-            <p className="w-fit h-fit bg-text-gradient text-6xl font-bold py-1 text-transparent bg-clip-text ">
+        <div
+          className="
+      relative
+      gap-15
+      flex
+      justify-between
+      pb-15
+    "
+        >
+          <div className="relative flex flex-col gap-4 min-w-">
+            <p
+              style={{ animationDelay: "200ms" }}
+              className="animate-fade-in-from-bottom opacity-0"
+            >
+              Cześć, mam na imie
+            </p>
+
+            <p className="w-fit bg-text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold py-1 text-transparent bg-clip-text mask-linear-[">
               Maksymilian
             </p>
+
             <p>
               Tworzę nowoczesne aplikacje webowe i mobilne.
               <br />
@@ -55,125 +60,44 @@ export default function Home() {
               <br />
               swoich umiejętności
             </p>
-            <div className="buttons flex gap-2 my-6">
+
+            <div className="buttons flex flex-wrap gap-2 my-6">
               <IconLink
                 icon={<ArrowUpRightStroke />}
                 label="Zobacz moje projekty"
                 href="/"
                 filled
               />
+
               <IconLink icon={<User size="sm" />} label="O mnie" href="/" />
             </div>
           </div>
-          <div>
-            <pre>
-              <span className="text-purple-400">const</span>{" "}
-              <span className="text-deep-blue">Developer</span>
-              {" = {"}
-              <br />
-              {"        "}
-              <span className="text-purple-300">name</span>
-              {":"}
-              {"    "}
-              <span className="text-lime-500">'Maksymilian'</span>
-              {","}
-              <br />
-              {"        "}
-              <span className="text-purple-300">frameworks</span>
-              {":   [ "}
-              <span className="text-lime-500">'React'</span>
-              {", "}
-              <span className="text-lime-500">'Next.js'</span>
-              {", "}
-              <span className="text-lime-500">'Vue.js'</span>
-              {", "}
-              <span className="text-lime-500">'Flutter'</span>
-              {" ],"}
-              <br />
-              {"        "}
-              <span className="text-purple-300">languages</span>
-              {":   {"}
-              <br />
-              {"              "} <span className="text-purple-300">web</span>
-              {":   [ "}
-              <span className="text-lime-500">'JS'</span>
-              {", "}
-              <span className="text-lime-500">'TS'</span>
-              {", "}
-              <span className="text-lime-500">'CSS'</span>
-              {", "}
-              <span className="text-lime-500">'SASS'</span>
-              {", "}
-              <span className="text-lime-500">'HTML'</span>
-              {" ],"}
-              <br />
-              {"              "}{" "}
-              <span className="text-purple-300">software</span>
-              {":   [ "}
-              <span className="text-lime-500">'Dart'</span>
-              {", "}
-              <span className="text-lime-500">'C#'</span>
-              {", "}
-              <span className="text-lime-500">'Python'</span>
-              {" ],"}
-              <br />
-              {"               "}
-              <span className="text-purple-300">databases</span>
-              {":   [ "}
-              <span className="text-lime-500">'SQL'</span>
-              {" ]"}
-              <br />
-              {"        },"}
-              <br />
-              {"        "}
-              <span className="text-purple-300">editors</span>
-              {":   [ "}
-              <span className="text-lime-500">'VS Code'</span>
-              {", "}
-              <span className="text-lime-500">'Visual Studio'</span>
-              {", "}
-              <span className="text-lime-500">'Android Studio'</span>
-              {" ],"}
-              <br />
-              {"};"}
-              <br />
-              <br />
-              <span className="text-deep-blue">export</span>{" "}
-              <span className="text-purple-400">default</span>{" "}
-              <span className="text-deep-blue">Developer</span>
-              {";"}
-            </pre>
-          </div>
+          <CodeBoard />
         </div>
       </Window>
-      <Window title="Status" icon={<RadioCircleMarked />}>
-        <div className="flex gap-4">
-          <RadioCircleMarked className="fill-lime-400" />
-          <span>Dostępny</span>
-        </div>
-        <span className="text-sm text-subtle-blue">
-          Otwarty na nowe wyzwania!
-        </span>
-      </Window>
-      <Window title="Linki" icon={<Link />}>
-        <div className="flex flex-col gap-3">
-          <SocialLink
-            href="https://github.com/M0lej"
-            icon={<Github />}
-            label="M0lej"
-          />
-          <SocialLink
-            href="https://www.instagram.com/m0lej/"
-            icon={<Instagram />}
-            label="M0lej"
-          />
-          <SocialLink
-            href="https://www.youtube.com/@M0l3j"
-            icon={<Youtube />}
-            label="M0l3j"
-          />
-        </div>
-      </Window>
+
+      <Skill
+        icon={<CodeAlt size="xl" className="fill-purple-400" />}
+        name="Czysty kod"
+        description="Piszę przejrzysty, dobrze zorganizowany kod z myślą o skalowości."
+      />
+      <Skill
+        icon={<BrushSparkles size="xl" className="fill-orange-400" />}
+        name="Nowoczesny design"
+        description="Tworzę estetyczne i funkcjonalne interfejsy użytkownika."
+      />
+
+      <Skill
+        icon={<Book size="xl" className="fill-blue-400" />}
+        name="Ciągły rozwój"
+        description="Nieustannie uczę się nowych technologii i doskonale umiejętności."
+      />
+
+      <Skill
+        icon={<Tachometer size="xl" className="fill-yellow-400" />}
+        name="Szybkie działanie"
+        description="Dbam o wydajność i optymalizację aplikacji."
+      />
     </div>
   );
 }

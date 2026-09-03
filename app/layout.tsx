@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import "./globals.css";
+import AppBar from "./components/app-bar/app-bar";
 
 const albertSans = Albert_Sans({
   subsets: ["latin"],
@@ -16,10 +17,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pl"
-      className={`${albertSans.variable} text-lg font-sans h-full antialiased`}
+      className={`${albertSans.variable} xl:text-lg lg:text-base md:text-sm text-xs font-sans h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col h-full font-sans">
+      <body className="min-h-full flex flex-col h-full font-sans items-center">
         {children}
+        <AppBar />
       </body>
     </html>
   );

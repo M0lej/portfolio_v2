@@ -2,9 +2,10 @@
 
 :root {
   --background: #0a0b26;
-  --foreground: #b6c8ff;
+  --foreground: #d7e1ff;
   --subtle-blue: #b6c8ff;
   --deep-blue: #6a8df7;
+  --code-board-outline: #3b4569;
 }
 
 @theme inline {
@@ -12,6 +13,8 @@
   --color-foreground: var(--foreground);
   --color-subtle-blue: var(--subtle-blue);
   --color-deep-blue: var(--deep-blue);
+  --color-code-board-outline: var(--code-board-outline);
+  --color-app-bar-button: #31437b;
   --background-image-window-gradient: radial-gradient(
     circle at left top,
     #1c2a50 0%,
@@ -32,9 +35,38 @@
     #697abb 0%,
     #31437b 100%
   );
+  --background-image-code-board-gradient: radial-gradient(
+    circle at left top,
+    #243460 0%,
+    #121d3a 100%
+  );
+  --background-image-code-board-fading-gradient: radial-gradient(
+    circle at left top,
+    #243460 0%,
+    transparent 100%
+  );
+  --background-image-code-board-fading-outline-gradient: radial-gradient(
+    circle at left top,
+    #3b4569 0%,
+    transparent 100%
+  );
+  --background-image-about-me-divider-gradient-vertical: linear-gradient(
+    0deg,
+    transparent 0%,
+    #6a8df7 50%,
+    transparent 100%
+  );
+  --background-image-about-me-divider-gradient-horizontal: linear-gradient(
+    90deg,
+    transparent 0%,
+    #6a8df7 50%,
+    transparent 100%
+  );
+
   --font-sans: var(--font-albert-sans);
   --font-mono: var(--font-albert-sans);
   --animate-fade-in: fade-in 0.5s ease forwards;
+  --animate-fade-in-from-bottom: fade-in-from-bottom 1s ease forwards;
 
   @keyframes fade-in {
     from {
@@ -44,6 +76,17 @@
     to {
       opacity: 1;
       scale: 1;
+    }
+  }
+
+  @keyframes fade-in-from-bottom {
+    from {
+      opacity: 0;
+      transform: translate(0rem, 2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0rem, 0rem);
     }
   }
 }
