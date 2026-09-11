@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Clock() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
@@ -10,5 +10,5 @@ export default function Clock() {
 
   setInterval(updateTime, 1000);
 
-  return <span className="w-10">{time.slice(0, 5)}</span>;
+  return <span className="w-10 h-full">{time.slice(0, 5)}</span>;
 }

@@ -7,6 +7,7 @@ type props = {
   icon: ReactNode;
   name: string;
   selected?: boolean;
+  showLabel?: boolean;
 };
 
 export default function AppBarButton({
@@ -14,14 +15,18 @@ export default function AppBarButton({
   icon,
   name,
   selected = false,
+  showLabel = true,
 }: props) {
   return (
     <Link
       href={href}
-      className={`flex gap-4 px-5 py-3 ${selected ? "bg-app-bar-button" : null} rounded-lg outline-1 outline-[#4f66ad] transition-colors`}
+      className={`relative px-5 py-3 ${selected && "bg-app-bar-button scale-105"} rounded-lg outline-1 outline-[#4f66ad] transition-all box-border overflow-hidden group`}
     >
-      {icon}
-      {name}
+      <div className="relative z-10 flex items-center gap-4">
+        {icon}
+        {showLabel && name}
+      </div>
+      <div className="absolute inset-0 bg-app-bar-button w-[0%] h-full z-0 transition-all group-hover:w-full"></div>
     </Link>
   );
 }

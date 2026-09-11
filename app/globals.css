@@ -5,6 +5,7 @@
   --foreground: #d7e1ff;
   --subtle-blue: #b6c8ff;
   --deep-blue: #6a8df7;
+  --faded-blue: #697abb;
   --code-board-outline: #3b4569;
 }
 
@@ -15,6 +16,7 @@
   --color-deep-blue: var(--deep-blue);
   --color-code-board-outline: var(--code-board-outline);
   --color-app-bar-button: #31437b;
+  --color-faded-blue: var(--faded-blue);
   --background-image-window-gradient: radial-gradient(
     circle at left top,
     #1c2a50 0%,
@@ -50,6 +52,17 @@
     #3b4569 0%,
     transparent 100%
   );
+  --background-image-window-in-window-outline-gradient:
+    radial-gradient(circle at top left, #aac2ff 0%, transparent 28%),
+    conic-gradient(
+      from 180deg,
+      #6a8df7 0deg,
+      #31437b 85deg,
+      transparent 145deg,
+      #405fbf 220deg,
+      #697abb 300deg,
+      #6a8df7 360deg
+    );
   --background-image-about-me-divider-gradient-vertical: linear-gradient(
     0deg,
     transparent 0%,
@@ -62,11 +75,26 @@
     #6a8df7 50%,
     transparent 100%
   );
-
+  --background-image-window-in-window-gradient: radial-gradient(
+    circle at bottom right,
+    #1c2a50 40%,
+    #6a8df7 400%
+  );
   --font-sans: var(--font-albert-sans);
   --font-mono: var(--font-albert-sans);
   --animate-fade-in: fade-in 0.5s ease forwards;
   --animate-fade-in-from-bottom: fade-in-from-bottom 1s ease forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      scale: 0.85;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 
   @keyframes fade-in {
     from {
@@ -101,4 +129,23 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #3b4569;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #6a8df7;
+  border-radius: 5px;
 }

@@ -4,16 +4,7 @@ import Skill from "./components/skill";
 import SocialLink from "./components/social-link";
 import Window from "./components/window";
 import {
-  BirthdayCake,
-  FlagAlt,
-  Education,
-  InfoCircle,
   HomeAlt,
-  RadioCircleMarked,
-  Link,
-  Github,
-  Instagram,
-  Youtube,
   ArrowUpRightStroke,
   User,
   CodeAlt,
@@ -24,20 +15,36 @@ import {
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-[1fr_1fr_1fr_1fr] auto-rows-min p-5 h-screen gap-3">
+    <div
+      className="
+        grid 
+        grid-cols-[1fr_1fr_1fr_1fr] 
+        auto-rows-min 
+        p-5 
+        gap-3 
+        pb-30
+        max-[820px]:grid-rows-[1fr_auto_auto]
+        max-[820px]:grid-cols-[1fr_1fr]
+      "
+    >
       <Window
         title="Strona główna"
-        className="row-span-2 col-span-4 w-full"
+        className="
+          max-[820px]:col-span-2 
+          col-span-4 
+          w-full 
+          row-start-1 
+          col-start-1"
         icon={<HomeAlt size="sm" />}
       >
         <div
           className="
-      relative
-      gap-15
-      flex
-      justify-between
-      pb-15
-    "
+            relative
+            gap-15
+            flex
+            justify-between
+            pb-15
+          "
         >
           <div className="relative flex flex-col gap-4 min-w-">
             <p
@@ -47,7 +54,7 @@ export default function Home() {
               Cześć, mam na imie
             </p>
 
-            <p className="w-fit bg-text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold py-1 text-transparent bg-clip-text mask-linear-[">
+            <p className="w-fit bg-text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold py-1 text-transparent bg-clip-text">
               Maksymilian
             </p>
 
@@ -73,30 +80,47 @@ export default function Home() {
             </div>
           </div>
           <CodeBoard />
+          <CodeAlt
+            className="min-[680px]:hidden fill-deep-blue drop-shadow-[0_0_12px_#6a8df7]"
+            size="2xl"
+          />
         </div>
       </Window>
 
       <Skill
-        icon={<CodeAlt size="xl" className="fill-purple-400" />}
+        icon={<CodeAlt size="xl" className="fill-purple-400 min-w-10" />}
         name="Czysty kod"
         description="Piszę przejrzysty, dobrze zorganizowany kod z myślą o skalowości."
+        subwindow={false}
+        className="
+          max-[820px]:col-start-1 
+          max-[820px]:row-start-2"
       />
       <Skill
-        icon={<BrushSparkles size="xl" className="fill-orange-400" />}
+        icon={<BrushSparkles size="xl" className="fill-orange-400 min-w-10" />}
         name="Nowoczesny design"
         description="Tworzę estetyczne i funkcjonalne interfejsy użytkownika."
+        subwindow={false}
+        className="
+          max-[820px]:col-start-2 
+          max-[820px]:row-start-2"
       />
 
       <Skill
-        icon={<Book size="xl" className="fill-blue-400" />}
+        icon={<Book size="xl" className="fill-blue-400 min-w-10" />}
         name="Ciągły rozwój"
         description="Nieustannie uczę się nowych technologii i doskonale umiejętności."
+        subwindow={false}
+        className="
+          max-[820px]:col-start-1 
+          max-[820px]:row-start-3"
       />
 
       <Skill
-        icon={<Tachometer size="xl" className="fill-yellow-400" />}
+        icon={<Tachometer size="xl" className="fill-yellow-400 min-w-10" />}
         name="Szybkie działanie"
         description="Dbam o wydajność i optymalizację aplikacji."
+        subwindow={false}
       />
     </div>
   );

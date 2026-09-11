@@ -28,7 +28,20 @@ export function CodeSpacer({
 export default function CodeBoard() {
   const linesCount = 12;
   return (
-    <div className="relative w-fit h-fit xl:w-fit min-w-0 max-[1450px]:zoom-90 max-[1380px]:zoom-80 max-[1320px]:zoom-70 max-[1180px]:zoom-60 max-[970px]:zoom-50 max-[900px]:hidden">
+    <div
+      className="
+    relative 
+    w-fit 
+    h-fit 
+    xl:w-fit 
+    min-w-0 
+    max-[1400px]:zoom-90 
+    max-[1310px]:zoom-80 
+    max-[1100px]:zoom-70 
+    max-[910px]:zoom-60 
+    max-[845px]:zoom-50 
+    max-[680px]:hidden"
+    >
       <div
         style={{ animationDelay: "400ms" }}
         className="

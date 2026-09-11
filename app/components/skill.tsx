@@ -7,15 +7,30 @@ type props = {
   name: string;
   description: string;
   className?: string;
+  subwindow?: boolean;
 };
-export default function Skill({ icon, name, description, className }: props) {
+export default function Skill({
+  icon,
+  name,
+  description,
+  className,
+  subwindow = true,
+}: props) {
   return (
-    <Window topBar={false}>
-      <div className="flex gap-4 items-center">
-        {icon}
-        <h1 className="font-bold text-xl">{name}</h1>
+    <article
+      className={`rounded-xl overflow-hidden animate-fade-in p-px ${subwindow ? "bg-window-in-window-outline-gradient" : "bg-border-gradient"} ${className}`}
+    >
+      <div
+        className={`relative ${subwindow ? "bg-window-in-window-gradient" : "bg-window-gradient"} h-full w-full rounded-xl`}
+      >
+        <div className={`content relative px-7 py-6 w-full`}>
+          <div className="flex gap-4 items-center">
+            {icon}
+            <h1 className="font-bold text-lg">{name}</h1>
+          </div>
+          <h2 className="text-sm my-5">{description}</h2>
+        </div>
       </div>
-      <h2 className="text-sm my-5">{description}</h2>
-    </Window>
+    </article>
   );
 }

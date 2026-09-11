@@ -22,9 +22,9 @@ export default function Window({
     <section
       className={`rounded-xl overflow-hidden animate-fade-in p-px bg-border-gradient ${className}`}
     >
-      <div className="relative bg-window-gradient h-full w-full rounded-xl">
-        {topBar ? (
-          <div className="appBar bg-window-topBar-gradient w-auto py-2 px-5 flex justify-between rounded-t-xl">
+      <div className="relative bg-window-gradient w-full h-full rounded-xl box-border flex flex-col">
+        {topBar && (
+          <div className="appBar bg-window-topBar-gradient w-auto py-2 px-5 flex justify-between rounded-t-xl shrink-0 max-[570px]:hidden">
             <div className="title flex space-x-3 items-center">
               {icon}
               <h1 className="text font-bold">{title}</h1>
@@ -35,9 +35,9 @@ export default function Window({
               <X size="sm" />
             </div>
           </div>
-        ) : null}
+        )}
         <div
-          className={`content relative px-7 py-6 w-full ${contentClassName}`}
+          className={`content relative box-border px-7 py-6 w-full flex-1 min-h-0 ${contentClassName}`}
         >
           {children}
         </div>
