@@ -50,9 +50,10 @@ export default function About() {
       max-[920px]:grid-rows-[1fr_auto_auto_auto]
       max-[570px]:grid-rows-[1fr_auto_auto_auto_auto]
       p-5 
-      w-screen 
+      w-full
       gap-3 
-      pb-30"
+      pb-30
+      overflow-x-visible"
     >
       <Window
         title={"O mnie"}
@@ -272,8 +273,7 @@ export default function About() {
         />
       </div>
       <Window
-        title={"Edytory i Narzędzia"}
-        icon={<PencilSparkles />}
+        topBar={false}
         contentClassName="grid grid-cols-2 min-[570px]:grid-cols-4 grid-rows-min gap-4"
         className="
           max-[570px]:row-start-4
@@ -299,6 +299,7 @@ export default function About() {
         icon={<Frame />}
         contentClassName="grid grid-cols-2 min-[570px]:grid-cols-4 gap-6"
         className="max-[570px]:row-start-4"
+        topBar={false}
       >
         <TextWithIcon label="React" icon={<ReactOriginalIcon size={32} />} />
         <TextWithIcon
@@ -326,6 +327,7 @@ export default function About() {
           max-[920px]:row-start-3
           max-[570px]:row-start-5
           "
+        topBar={false}
       >
         <TextWithIcon label="Dart" icon={<DartOriginalIcon size={32} />} />
         <TextWithIcon

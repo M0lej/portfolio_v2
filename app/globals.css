@@ -7,16 +7,23 @@
   --deep-blue: #6a8df7;
   --faded-blue: #697abb;
   --code-board-outline: #3b4569;
+  --secondary-text: #b2bcd9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary-text);
   --color-subtle-blue: var(--subtle-blue);
   --color-deep-blue: var(--deep-blue);
   --color-code-board-outline: var(--code-board-outline);
   --color-app-bar-button: #31437b;
   --color-faded-blue: var(--faded-blue);
+  --background-image-button-gradient: radial-gradient(
+    circle at left top,
+    #829ef4 0%,
+    var(--deep-blue) 100%
+  );
   --background-image-window-gradient: radial-gradient(
     circle at left top,
     #1c2a50 0%,
