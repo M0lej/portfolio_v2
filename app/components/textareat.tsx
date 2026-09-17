@@ -29,6 +29,8 @@ export default function TextArea({
         {icon}
         <textarea
           className=" placeholder:text-subtle-blue min-h-7 h-30 w-full resize-y"
+          id={labelFor}
+          name={labelFor}
           {...textareaProps}
         />
       </div>

@@ -9,7 +9,11 @@ export async function sendEmail(formData: FormData) {
   const { email, subject, message } = Object.fromEntries(formData.entries());
 
   if (!email || !subject || !message) {
-    throw new Error("All fields are need to be filled");
+    console.error("All fields need to be filled");
+    console.log(email, subject, message);
+    return {
+      success: false,
+    };
   }
 
   const transporter = nodemailer.createTransport({

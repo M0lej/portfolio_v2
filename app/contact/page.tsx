@@ -21,7 +21,6 @@ import Input from "../components/input";
 import TextArea from "../components/textareat";
 import SubWindow from "../components/sub-window";
 import SocialLinkAlt from "../components/social-link-alt";
-import SocialLink from "../components/social-link";
 
 export default function Contact() {
   const [state, formAction, isPending] = useActionState<

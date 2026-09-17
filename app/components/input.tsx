@@ -25,6 +25,8 @@ export default function Input({
         {icon}
         <input
           className=" placeholder:text-subtle-blue w-full "
+          id={labelFor}
+          name={labelFor}
           {...inputProps}
         />
       </div>
