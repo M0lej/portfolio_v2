@@ -26,7 +26,7 @@ export function TransitionScreenProvider({
     currentIndex: 3,
     targetIndex: 3,
   });
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [animationIndex, setAnimationIndex] = useState(0);
 
   useEffect(() => {
@@ -59,14 +59,14 @@ export function TransitionScreenProvider({
     >
       {children}
       <div
-        className={`fixed inset-0 z-50 flex items-center justify-center
+        className={`fixed inset-0 z-50 flex items-center justify-center overflow-hidden
           bg-background/85 px-4 backdrop-blur-sm transition-opacity duration-500 ease-in-out
           ${visible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <div
-          className={`max-h-[calc(100dvh-2rem)] w-fit max-w-full overflow-hidden rounded-xl border border-code-board-outline bg-window-gradient p-3 shadow-2xl sm:p-4 ${visible ? "scale-100 opacity-100" : "scale-80 opacity-0"} transition-all delay-200 duration-250`}
+          className={`box-border min-h-0 max-h-[calc(100dvh-2rem)] w-fit max-w-full overflow-hidden rounded-xl border border-code-board-outline bg-window-gradient p-3 shadow-2xl sm:p-4 ${visible ? "scale-100 opacity-100" : "scale-80 opacity-0"} transition-all delay-200 duration-250`}
         >
-          <div className="relative flex max-h-[calc(100dvh-6rem)] w-fit max-w-full gap-2 overflow-x-hidden overflow-y-auto max-[640px]:flex-col">
+          <div className="relative flex min-h-0 max-h-[calc(100dvh-6rem)] w-fit max-w-full gap-2 overflow-hidden max-[640px]:flex-col">
             <PagePreviewSelector animationIndex={animationIndex} />
             <PagePreview
               label="Strona główna"

@@ -47,6 +47,7 @@ export default function AppBar() {
         p-px
         bg-border-gradient
         rounded-2xl
+        z-50
     "
     >
       <div

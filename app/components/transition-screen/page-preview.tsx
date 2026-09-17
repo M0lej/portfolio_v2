@@ -12,7 +12,7 @@ export default function PagePreview({
   return (
     <div
       data-page-preview
-      className="relative z-10 w-[30vw] min-w-40 shrink-0 max-[640px]:w-[min(70vw,24rem)]  sm:w-[15vw]"
+      className="relative z-10 min-h-0 w-[30vw] min-w-40 shrink-0 max-[640px]:w-[min(70vw,max(0px,25dvh))] max-[640px]:min-w-0 sm:w-[15vw]"
     >
       <div
         className={`aspect-video overflow-hidden rounded-lg transition-all duration-500 ${

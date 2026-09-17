@@ -16,7 +16,7 @@ export default function PagePreviewSelector({
   return (
     <div
       data-page-preview
-      className="absolute left-0 top-0 bg-deep-blue shadow-lg shadow-deep-blue/30 transition-transform duration-700 ease-in-out rounded-lg z-10 w-[30vw] min-w-40 shrink-0 max-[640px]:w-[min(70vw,24rem)]  sm:w-[15vw]"
+      className="absolute left-0 top-0 z-10 w-[30vw] min-w-40 shrink-0 rounded-lg bg-deep-blue shadow-lg shadow-deep-blue/30 transition-transform duration-700 ease-in-out max-[640px]:w-[min(70vw,max(0px,25dvh))] max-[640px]:min-w-0 sm:w-[15vw]"
       style={{
         transform:
           isMounted && (innerWidth ?? 0) <= 640
