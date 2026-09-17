@@ -14,6 +14,7 @@ import {
 } from "@boxicons/react";
 
 export default function Home() {
+  
   return (
     <div
       className="
@@ -55,11 +56,17 @@ export default function Home() {
               Cześć, mam na imie
             </p>
 
-            <p className="w-fit bg-text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold py-1 text-transparent bg-clip-text">
+            <p
+              className="w-fit bg-text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold py-1 text-transparent bg-clip-text animate-fade-in-from-bottom opacity-0"
+              style={{ animationDelay: "400ms" }}
+            >
               Maksymilian
             </p>
 
-            <p>
+            <p
+              className="animate-fade-in-from-bottom opacity-0"
+              style={{ animationDelay: "600ms" }}
+            >
               Tworzę nowoczesne aplikacje webowe i mobilne.
               <br />
               Lubię{" "}
@@ -71,6 +78,8 @@ export default function Home() {
 
             <div className="buttons flex flex-wrap gap-2 my-6">
               <IconLink
+                className="animate-fade-in-from-bottom opacity-0"
+                style={{ animationDelay: "800ms" }}
                 icon={<ArrowUpRightStroke />}
                 label="Zobacz moje projekty"
                 href="/projects"
@@ -80,6 +89,8 @@ export default function Home() {
               />
 
               <IconLink
+                className="animate-fade-in-from-bottom opacity-0"
+                style={{ animationDelay: "900ms" }}
                 icon={<User size="sm" />}
                 label="O mnie"
                 href="/about"

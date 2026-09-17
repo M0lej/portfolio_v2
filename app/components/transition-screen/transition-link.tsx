@@ -30,7 +30,7 @@ export function TransitionLink({
     if (currentPageIndex == targetPageIndex) return;
 
     showTransition(currentPageIndex, targetPageIndex);
-    await sleep(250);
+    await sleep(300);
     router.push(href);
     await sleep(300);
     hideTransition();

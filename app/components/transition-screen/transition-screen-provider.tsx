@@ -63,7 +63,9 @@ export function TransitionScreenProvider({
           bg-background/85 px-4 backdrop-blur-sm transition-opacity duration-500 ease-in-out
           ${visible ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"}`}
       >
-        <div className="max-h-[calc(100dvh-2rem)] w-fit max-w-full overflow-hidden rounded-xl border border-code-board-outline bg-window-gradient p-3 shadow-2xl sm:p-4">
+        <div
+          className={`max-h-[calc(100dvh-2rem)] w-fit max-w-full overflow-hidden rounded-xl border border-code-board-outline bg-window-gradient p-3 shadow-2xl sm:p-4 ${visible ? "scale-100 opacity-100" : "scale-80 opacity-0"} transition-all delay-200 duration-250`}
+        >
           <div className="relative flex max-h-[calc(100dvh-6rem)] w-fit max-w-full gap-2 overflow-x-hidden overflow-y-auto max-[640px]:flex-col">
             <PagePreviewSelector animationIndex={animationIndex} />
             <PagePreview
