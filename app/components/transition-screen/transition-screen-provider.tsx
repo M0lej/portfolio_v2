@@ -26,7 +26,7 @@ export function TransitionScreenProvider({
     currentIndex: 3,
     targetIndex: 3,
   });
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   const [animationIndex, setAnimationIndex] = useState(0);
 
   useEffect(() => {
