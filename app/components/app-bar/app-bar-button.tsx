@@ -28,7 +28,7 @@ export default function AppBarButton({
       targetPageIndex={targetPageIndex}
     >
       <div
-        className={`relative px-5 py-3 ${selected ? "bg-app-bar-button scale-105" : ""} rounded-lg outline-1 outline-[#4f66ad] transition-all box-border overflow-hidden group active:scale-80`}
+        className={`relative px-5 py-3 ${selected ? "bg-app-bar-button scale-105" : ""} rounded-lg outline-1 outline-[#4f66ad] transition-all box-border overflow-hidden group active:scale-80 h-full flex items-center`}
       >
         <div className="relative z-10 flex items-center gap-4">
           {icon}

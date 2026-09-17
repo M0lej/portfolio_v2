@@ -41,6 +41,8 @@ export default function AppBar() {
         fixed
         bottom-5
         w-[80vw] 
+        max-[1200px]:w-[90vw]
+        max-[930px]:w-[95vw]
         h-fit 
         p-px
         bg-border-gradient
@@ -57,7 +59,6 @@ export default function AppBar() {
     bg-window-gradient 
     rounded-2xl 
     max-[1330px]:w-full
-    max-[1330px]:rounded-none
     max-[1330px]:bottom-0  
     z-50
     drop-shadow-xl
@@ -69,9 +70,10 @@ export default function AppBar() {
         <nav
           className="
       buttons  
-      ml-20 
+      ml-20
       flex
       gap-4
+      max-[1300px]:ml-10
       max-[878px]:ml-auto
       max-[450px]:ml-0
       "
