@@ -8,6 +8,7 @@ type props = {
   contentClassName?: string;
   icon?: ReactNode;
   topBar?: boolean;
+  index?: number;
 };
 
 export default function Window({
@@ -17,10 +18,14 @@ export default function Window({
   icon,
   topBar = true,
   contentClassName,
+  index,
 }: props) {
   return (
     <section
-      className={`rounded-xl overflow-hidden animate-fade-in p-px bg-border-gradient ${className}`}
+      className={`rounded-xl overflow-hidden animate-fade-in p-px bg-border-gradient ${className} opacity-0 drop-shadow-xl`}
+      style={
+        index != null ? { animationDelay: `${index! * 100}ms` } : undefined
+      }
     >
       <div className="relative bg-window-gradient w-full h-full rounded-xl box-border flex flex-col">
         {topBar && (

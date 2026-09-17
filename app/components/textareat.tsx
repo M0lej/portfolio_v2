@@ -25,7 +25,7 @@ export default function TextArea({
       <label htmlFor={labelFor} className="font-bold">
         {label}
       </label>
-      <div className="border py-2 px-4 rounded-lg border-faded-blue flex items-center gap-4 h-fit">
+      <div className="border py-2 px-4 rounded-lg border-faded-blue flex items-center gap-4 h-fit focus-within:scale-[1.01] transition-all focus-within:border-deep-blue">
         {icon}
         <textarea
           className=" placeholder:text-subtle-blue min-h-7 h-30 w-full resize-y"

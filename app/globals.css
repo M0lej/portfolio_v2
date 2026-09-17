@@ -31,7 +31,7 @@
   );
   --background-image-window-topBar-gradient: linear-gradient(
     90deg,
-    #31437b 0%,
+    var(--deep-blue) 0%,
     #405fbf 100%
   );
   --background-image-text-gradient: linear-gradient(
@@ -89,8 +89,9 @@
   );
   --font-sans: var(--font-albert-sans);
   --font-mono: var(--font-albert-sans);
-  --animate-fade-in: fade-in 0.5s ease forwards;
+  --animate-fade-in: fade-in 1s ease forwards;
   --animate-fade-in-from-bottom: fade-in-from-bottom 1s ease forwards;
+  --animate-appear: appear 0.5s ease forwards;
 
   @keyframes fade-in {
     from {
@@ -124,6 +125,15 @@
       transform: translate(0rem, 0rem);
     }
   }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -134,7 +144,22 @@
 }
 
 body {
-  background: var(--background);
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--background);
+  background-image:
+    radial-gradient(
+      circle at 8% 0%,
+      rgba(74, 91, 190, 0.2) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 92% 100%,
+      rgba(48, 72, 139, 0.14) 0%,
+      transparent 30%
+    ),
+    linear-gradient(135deg, #0d102c 0%, var(--background) 58%, #0b1129 100%);
+  background-attachment: fixed;
   color: var(--foreground);
 }
 

@@ -37,11 +37,18 @@ export default function AppBar() {
 
   return (
     <div
-      className="
-    fixed
-    bottom-5
-    w-[80vw] 
-    h-fit 
+      className="    
+        fixed
+        bottom-5
+        w-[80vw] 
+        h-fit 
+        p-px
+        bg-border-gradient
+        rounded-2xl
+    "
+    >
+      <div
+        className="
     py-3 
     px-8 
     flex
@@ -53,11 +60,14 @@ export default function AppBar() {
     max-[1330px]:rounded-none
     max-[1330px]:bottom-0  
     z-50
+    drop-shadow-xl
     "
-    >
-      {isMounted && (innerWidth ?? 0) >= 450 && <Logo className="h-7 w-auto" />}
-      <nav
-        className="
+      >
+        {isMounted && (innerWidth ?? 0) >= 450 && (
+          <Logo className="h-7 w-auto" />
+        )}
+        <nav
+          className="
       buttons  
       ml-20 
       flex
@@ -65,43 +75,52 @@ export default function AppBar() {
       max-[878px]:ml-auto
       max-[450px]:ml-0
       "
-      >
-        <AppBarButton
-          href="/"
-          name="Strona główna"
-          icon={<HomeAlt className="fill-purple-400" />}
-          selected={selectedIndex === 0}
-          showLabel={showLabels}
-        />
-        <AppBarButton
-          href="/projects"
-          name="Projekty"
-          icon={<GitRepoForked className="fill-deep-blue" />}
-          selected={selectedIndex === 1}
-          showLabel={showLabels}
-        />
-        <AppBarButton
-          href="/about"
-          name="O mnie"
-          icon={<User className="fill-lime-500" />}
-          selected={selectedIndex === 2}
-          showLabel={showLabels}
-        />
-        <AppBarButton
-          href="/contact"
-          name="Kontakt"
-          icon={<Phone className="fill-yellow-400" />}
-          selected={selectedIndex === 3}
-          showLabel={showLabels}
-        />
-      </nav>
-      {isMounted && (innerWidth ?? 0) >= 450 && (
-        <div className={`decorations ml-auto flex items-center gap-4 `}>
-          <Wifi />
-          <VolumeFull />
-          <Clock />
-        </div>
-      )}
+        >
+          <AppBarButton
+            href="/"
+            name="Strona główna"
+            icon={<HomeAlt className="fill-purple-400" />}
+            selected={selectedIndex === 0}
+            showLabel={showLabels}
+            currentPageIndex={selectedIndex}
+            targetPageIndex={0}
+          />
+          <AppBarButton
+            href="/projects"
+            name="Projekty"
+            icon={<GitRepoForked className="fill-deep-blue" />}
+            selected={selectedIndex === 1}
+            showLabel={showLabels}
+            currentPageIndex={selectedIndex}
+            targetPageIndex={1}
+          />
+          <AppBarButton
+            href="/about"
+            name="O mnie"
+            icon={<User className="fill-lime-500" />}
+            selected={selectedIndex === 2}
+            showLabel={showLabels}
+            currentPageIndex={selectedIndex}
+            targetPageIndex={2}
+          />
+          <AppBarButton
+            href="/contact"
+            name="Kontakt"
+            icon={<Phone className="fill-yellow-400" />}
+            selected={selectedIndex === 3}
+            showLabel={showLabels}
+            currentPageIndex={selectedIndex}
+            targetPageIndex={3}
+          />
+        </nav>
+        {isMounted && (innerWidth ?? 0) >= 450 && (
+          <div className={`decorations ml-auto flex items-center gap-4 `}>
+            <Wifi />
+            <VolumeFull />
+            <Clock />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

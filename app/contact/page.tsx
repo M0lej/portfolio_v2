@@ -98,59 +98,30 @@ export default function Contact() {
             <br />
             <p>m.olejnik.dev@gmail.com</p>
           </SubWindow>
-          <div className="flex justify-between gap-2 h-20 max-[1560px]:hidden">
+          <div className="flex justify-between gap-2 h-20 max-[1280px]:flex-col max-[1280px]:h-fit">
             <SocialLinkAlt
-              classname="h-full"
+              classname="h-full w-full"
+              textClassName="min-[1280px]:hidden min-[1490px]:block"
               appName="Github"
               username="M0lej"
               href="https://github.com/M0lej"
               icon={<Github size="lg" />}
             />
             <SocialLinkAlt
-              classname="h-full"
+              classname="h-full w-full"
+              textClassName="min-[1280px]:hidden min-[1490px]:block"
               appName="Youtube"
               username="M0lej"
               href="https://www.youtube.com/@M0l3j"
               icon={<Youtube size="lg" />}
             />
             <SocialLinkAlt
-              classname="h-full"
+              classname="h-full w-full"
+              textClassName="min-[1280px]:hidden min-[1490px]:block"
               appName="LinkedIn"
               username=""
               href="https://www.linkedin.com/in/maksymilian-olejnik-4502363b0/"
               icon={<Linkedin size="lg" />}
-            />
-          </div>
-          <div className="flex w-full gap-4 justify-center">
-            <SocialLink
-              icon={
-                <Github
-                  height={32}
-                  width={32}
-                  className="fill-subtle-blue hover:fill-foreground transition-colors"
-                />
-              }
-              href="https://github.com/M0lej"
-            />
-            <SocialLink
-              icon={
-                <Youtube
-                  height={32}
-                  width={32}
-                  className="fill-subtle-blue hover:fill-foreground transition-colors"
-                />
-              }
-              href="https://www.youtube.com/@M0l3j"
-            />
-            <SocialLink
-              icon={
-                <Linkedin
-                  height={32}
-                  width={32}
-                  className="fill-subtle-blue hover:fill-foreground transition-colors"
-                />
-              }
-              href="https://www.linkedin.com/in/maksymilian-olejnik-4502363b0/"
             />
           </div>
         </section>

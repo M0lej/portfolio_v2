@@ -36,6 +36,7 @@ export default function Home() {
           row-start-1 
           col-start-1"
         icon={<HomeAlt size="sm" />}
+        index={1}
       >
         <div
           className="
@@ -72,11 +73,19 @@ export default function Home() {
               <IconLink
                 icon={<ArrowUpRightStroke />}
                 label="Zobacz moje projekty"
-                href="/"
+                href="/projects"
                 filled
+                currentPageIndex={0}
+                targetPageIndex={1}
               />
 
-              <IconLink icon={<User size="sm" />} label="O mnie" href="/" />
+              <IconLink
+                icon={<User size="sm" />}
+                label="O mnie"
+                href="/about"
+                currentPageIndex={0}
+                targetPageIndex={2}
+              />
             </div>
           </div>
           <CodeBoard />
@@ -95,6 +104,7 @@ export default function Home() {
         className="
           max-[820px]:col-start-1 
           max-[820px]:row-start-2"
+        index={2}
       />
       <Skill
         icon={<BrushSparkles size="xl" className="fill-orange-400 min-w-10" />}
@@ -104,6 +114,7 @@ export default function Home() {
         className="
           max-[820px]:col-start-2 
           max-[820px]:row-start-2"
+        index={3}
       />
 
       <Skill
@@ -114,6 +125,7 @@ export default function Home() {
         className="
           max-[820px]:col-start-1 
           max-[820px]:row-start-3"
+        index={4}
       />
 
       <Skill
@@ -121,6 +133,7 @@ export default function Home() {
         name="Szybkie działanie"
         description="Dbam o wydajność i optymalizację aplikacji."
         subwindow={false}
+        index={5}
       />
     </div>
   );

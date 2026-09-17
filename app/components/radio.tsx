@@ -1,3 +1,5 @@
+import { ChangeEvent, ChangeEventHandler } from "react";
+
 type props = {
   className?: string;
   htmlFor: string;
@@ -5,6 +7,7 @@ type props = {
   value: string;
   inputName: string;
   defaultChecked?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 export default function Radio({
   className,
@@ -13,10 +16,11 @@ export default function Radio({
   value,
   inputName,
   defaultChecked = false,
+  onChange,
 }: props) {
   return (
     <label
-      className={`py-2 px-4 rounded-lg has-checked:bg-button-gradient outline-deep-blue outline-1 has-checked:outline-0 cursor-pointer`}
+      className={`py-2 px-4 rounded-lg has-checked:bg-button-gradient outline-deep-blue outline-1 has-checked:outline-0 cursor-pointer flex items-center active:scale-80 transition-all select-none `}
       htmlFor={htmlFor}
     >
       <div className={`space-x-4  ${className}`}>
@@ -28,6 +32,7 @@ export default function Radio({
           value={value}
           className="hidden"
           defaultChecked={defaultChecked}
+          onChange={onChange}
         />
       </div>
     </label>

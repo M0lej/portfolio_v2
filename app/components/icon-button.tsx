@@ -40,7 +40,7 @@ export default function IconButton({
 
   return (
     <button
-      className={`flex items-center gap-2 py-2 px-6 w-fit rounded-sm cursor-pointer ${filled ? "bg-deep-blue" : "outline-deep-blue outline-1"} ${className}`}
+      className={`flex items-center gap-2 py-2 px-6 w-fit rounded-sm cursor-pointer ${filled ? "bg-button-gradient" : "outline-deep-blue outline-1"} ${className} active:scale-80 transition-all select-none`}
       {...buttonProps}
     >
       {content}

@@ -8,6 +8,7 @@ type props = {
   description: string;
   className?: string;
   subwindow?: boolean;
+  index?: number;
 };
 export default function Skill({
   icon,
@@ -15,10 +16,14 @@ export default function Skill({
   description,
   className,
   subwindow = true,
+  index,
 }: props) {
   return (
     <article
-      className={`rounded-xl overflow-hidden animate-fade-in p-px ${subwindow ? "bg-window-in-window-outline-gradient" : "bg-border-gradient"} ${className}`}
+      className={`rounded-xl overflow-hidden animate-fade-in p-px ${subwindow ? "bg-window-in-window-outline-gradient" : "bg-border-gradient"} ${className} opacity-0`}
+      style={
+        index != null ? { animationDelay: `${index! * 100}ms` } : undefined
+      }
     >
       <div
         className={`relative ${subwindow ? "bg-window-in-window-gradient" : "bg-window-gradient"} h-full w-full rounded-xl`}

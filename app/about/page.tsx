@@ -77,6 +77,7 @@ export default function About() {
           max-[1624px]:col-span-2
           col-start-2
           "
+        index={1}
       >
         <div className="relative w-full flex flex-col inset-0 box-border justify-between col-start-1 max-[460px]:items-center max-[460px]:row-start-3">
           <section className="flex justify-center w-full h-fit col-span-3">
@@ -121,18 +122,21 @@ export default function About() {
               name="Web Development"
               description="Tworzę nowoczesne aplikacje webowe z dbałością o wydajność i responsywność."
               className="h-full min-w-50"
+              index={2}
             />
             <Skill
               icon={<Mobile size="lg" className="fill-deep-blue min-w-10" />}
               name="Mobile Development"
               description="Projektuję aplikacje mobilne w Flutter, które są szybkie intuicyjne i estetyczne."
               className="h-full min-w-50"
+              index={3}
             />
             <Skill
               icon={<Database size="lg" className="fill-deep-blue min-w-10" />}
               name="Backend"
               description="Pracuję z bazami danych i API, dbając o niezawodność i bezpieczeństwo danych."
               className="h-full min-w-50"
+              index={4}
             />
           </div>
         </div>
@@ -256,6 +260,7 @@ export default function About() {
           description="Tworzę nowoczesne aplikacje webowe z dbałością o wydajność i responsywność."
           className="h-full min-w-50 max-[570px]:col-span-2 max-[370px]:col-span-1"
           subwindow={false}
+          index={2}
         />
         <Skill
           icon={<Mobile size="lg" className="fill-deep-blue min-w-10" />}
@@ -263,6 +268,7 @@ export default function About() {
           description="Projektuję aplikacje mobilne w Flutter, które są szybkie intuicyjne i estetyczne."
           className="h-full min-w-50"
           subwindow={false}
+          index={3}
         />
         <Skill
           icon={<Database size="lg" className="fill-deep-blue min-w-10" />}
@@ -270,6 +276,7 @@ export default function About() {
           description="Pracuję z bazami danych i API, dbając o niezawodność i bezpieczeństwo danych."
           className="h-full min-w-50"
           subwindow={false}
+          index={4}
         />
       </div>
       <Window
@@ -279,6 +286,7 @@ export default function About() {
           max-[570px]:row-start-4
           min-[1624px]:row-start-1
         "
+        index={2}
       >
         <TextWithIcon label="VS Code" icon={<VscodeOriginalIcon size={32} />} />
         <TextWithIcon
@@ -300,6 +308,7 @@ export default function About() {
         contentClassName="grid grid-cols-2 min-[570px]:grid-cols-4 gap-6"
         className="max-[570px]:row-start-4"
         topBar={false}
+        index={3}
       >
         <TextWithIcon label="React" icon={<ReactOriginalIcon size={32} />} />
         <TextWithIcon
@@ -328,6 +337,7 @@ export default function About() {
           max-[570px]:row-start-5
           "
         topBar={false}
+        index={4}
       >
         <TextWithIcon label="Dart" icon={<DartOriginalIcon size={32} />} />
         <TextWithIcon

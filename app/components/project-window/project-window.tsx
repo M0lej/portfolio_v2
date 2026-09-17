@@ -4,11 +4,7 @@ import { ArrowUpRightStroke, GitRepoForked, User } from "@boxicons/react";
 import Image from "next/image";
 import Tag from "./tag";
 import IconLink, { IconPosition } from "../icon-link";
-
-export enum Category {
-  web,
-  mobile,
-}
+import { Category } from "@/app/resources/data";
 
 type props = {
   title: string;
@@ -22,6 +18,7 @@ type props = {
   imgPath: string;
   description: string;
   category: Category;
+  index?: number;
 };
 
 export default function ProjectWindow({
@@ -35,17 +32,19 @@ export default function ProjectWindow({
   demoHref,
   imgPath,
   description,
+  index,
 }: props) {
   return (
     <Window
       title={title}
-      className={className}
+      className={`${className}`}
       icon={<GitRepoForked />}
       topBar={topBar}
       contentClassName={contentClassName}
+      index={index}
     >
-      <div className="relative rounded-lg p-px bg-code-board-fading-outline-gradient h-full w-full max-w-150">
-        <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+      <div className="relative rounded-lg p-px bg-code-board-fading-outline-gradient w-full min-h-100  max-w-150">
+        <div className="relative w-full h-full overflow-hidden rounded-lg">
           <Image
             src={imgPath}
             alt={title}
@@ -57,7 +56,7 @@ export default function ProjectWindow({
       </div>
       <div className="flex flex-col">
         <h1 className="font-bold">{title}</h1>
-        <h2 className="min-w-0">{description}</h2>
+        <h2 className="min-w-0 max-w-50">{description}</h2>
         <div className="tags flex flex-wrap gap-2 my-4">
           {tags?.map((tagName: string, index) => (
             <Tag name={tagName} key={index} icon={tagsIcons[index]} />
