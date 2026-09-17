@@ -59,7 +59,7 @@ export const projectsDatabase = [
     description:
       "Aplikacja webowa umożliwiająca nauczycielom szybkie sprawdzenie, w jakim stopniu uczniowie rozumieją zagadnienia omawiane podczas lekcji.",
     githubHref: "https://github.com/M0lej/ewaluator_lekcji/",
-    demoHref: "",
+    demoHref: "https://ewaluator-lekcji.netlify.app/",
     imgPath: "/ewaluator.png",
     tags: ["Next.js", "Typescript", "MongoDB", "Tailwindcss"],
     tagsIcons: [
