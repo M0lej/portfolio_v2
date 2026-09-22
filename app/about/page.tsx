@@ -303,7 +303,6 @@ export default function About() {
         />
       </Window>
       <Window
-        title={"Technologie"}
         icon={<Frame />}
         contentClassName="grid grid-cols-2 min-[570px]:grid-cols-4 gap-6"
         className="max-[570px]:row-start-4"
@@ -325,9 +324,12 @@ export default function About() {
           label="Flutter"
           icon={<FlutterOriginalIcon size={32} />}
         />
+        <TextWithIcon
+          label="REST"
+          icon={<Database size="md" className="fill-yellow-400" />}
+        />
       </Window>
       <Window
-        title={"Języki Programowania"}
         icon={<CodeAlt />}
         contentClassName="grid grid-cols-4 gap-4 h-fit min-[560px]:grid-cols-6 min-[860px]:grid-cols-10 min-[1624px]:grid-cols-5"
         className="

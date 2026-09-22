@@ -141,7 +141,9 @@ export default function CodeBoard() {
                     <br />
                     <KeyAndValue
                       name="databases"
-                      value={<CodeBoardArray values={["SQL", "NoSQl"]} />}
+                      value={
+                        <CodeBoardArray values={["SQL", "NoSQl", "REST"]} />
+                      }
                     />
                   </CodeSpacer>
                   <br />
