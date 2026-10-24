@@ -28,5 +28,5 @@ Moja prywatna strona wizytówkowa stworzona w celu zaprezentowania projektów, u
 
 ### 📫 Kontakt
 * 🌍 Portfolio: [portfolio-maksymilian.netlify.app](https://portfolio-maksymilian.netlify.app/)
-* 📧 Email: [m.olejnik.dev@gmail.com]
-* 📞 Telefon: [+48 794 488 269]
+* 📧 Email: m.olejnik.dev@gmail.com
+* 📞 Telefon: +48 794 488 269
