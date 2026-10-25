@@ -9,7 +9,6 @@ import {
   Linkedin,
   Location,
   Mobile,
-  PencilSparkles,
   RadioCircleMarked,
   Smile,
   Youtube,
@@ -31,7 +30,6 @@ import {
   TypescriptOriginalIcon,
   VisualstudioOriginalIcon,
   VscodeOriginalIcon,
-  VuejsOriginalIcon,
 } from "@devicon/react";
 import TextWithIcon from "../components/text-with-icon";
 import Image from "next/image";
@@ -319,7 +317,6 @@ export default function About() {
             </div>
           }
         />
-        <TextWithIcon label="Vue" icon={<VuejsOriginalIcon size={32} />} />
         <TextWithIcon
           label="Flutter"
           icon={<FlutterOriginalIcon size={32} />}

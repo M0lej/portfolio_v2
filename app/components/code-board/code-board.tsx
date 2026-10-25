@@ -110,9 +110,7 @@ export default function CodeBoard() {
             <KeyAndValue
               name="frameworks"
               value={
-                <CodeBoardArray
-                  values={["React", "Next.js", "Vue.js", "Flutter"]}
-                />
+                <CodeBoardArray values={["React", "Next.js", "Flutter"]} />
               }
             />
             <br />
