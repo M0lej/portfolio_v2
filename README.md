@@ -7,7 +7,7 @@ Jestem **Frontend & Mobile Developerem**. Tworzę nowoczesne, wydajne i estetycz
 ### 🛠️ Technologie i narzędzia
 
 **Frontend & Mobile:**
-`React` • `Next.js` • `Vue.js` • `Flutter` • `TypeScript` • `JavaScript` • `Tailwind CSS` • `HTML5/CSS3`
+`React` • `Next.js` • `Flutter` • `TypeScript` • `JavaScript` • `Tailwind CSS` • `HTML5/CSS3`
 
 **Backend & Bazy danych:**
 `Node.js` • `REST API` • `SQL` • `MongoDB` • `Python` • `C#`
