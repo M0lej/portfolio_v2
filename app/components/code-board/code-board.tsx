@@ -132,9 +132,7 @@ export default function CodeBoard() {
                     <br />
                     <KeyAndValue
                       name="software"
-                      value={
-                        <CodeBoardArray values={["Dart", "C#", "Python"]} />
-                      }
+                      value={<CodeBoardArray values={["Dart", "C#"]} />}
                     />
                     <br />
                     <KeyAndValue

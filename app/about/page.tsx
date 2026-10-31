@@ -37,6 +37,17 @@ import SocialLink from "../components/social-link";
 import Skill from "../components/skill";
 
 export default function About() {
+  const birthDate = new Date(2006, 11, 4);
+  const today = new Date();
+  const age =
+    today.getFullYear() -
+    birthDate.getFullYear() -
+    (today.getMonth() < birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() < birthDate.getDate())
+      ? 1
+      : 0);
+
   return (
     <div
       className="
@@ -81,7 +92,7 @@ export default function About() {
           <section className="flex justify-center w-full h-fit col-span-3">
             <p className="flex flex-col gap-5 h-fit">
               <span className="relative h-fit">
-                Jestem 19-letnim absolwentem technikum informatycznego na
+                Jestem {age}-letnim absolwentem technikum informatycznego na
                 kierunku{" "}
                 <span className="text-deep-blue">Technik Programista</span>.
                 Właśnie zakończyłem naukę w szkole średniej i rozpoczynam
@@ -181,7 +192,7 @@ export default function About() {
             </div>
             <div className="flex gap-4 items-center">
               <BirthdayCake className="fill-subtle-blue" />
-              <p>19 lat</p>
+              <p>{age} lat</p>
             </div>
             <div className="flex gap-4 items-center">
               <Education className="fill-subtle-blue" />
@@ -359,7 +370,6 @@ export default function About() {
         <TextWithIcon label="CSS" icon={<Css3OriginalIcon size={32} />} />
         <TextWithIcon label="Sass" icon={<SassOriginalIcon size={32} />} />
         <TextWithIcon label="HTML" icon={<Html5OriginalIcon size={32} />} />
-        <TextWithIcon label="Python" icon={<PythonOriginalIcon size={32} />} />
         <TextWithIcon
           label="SQL"
           icon={<Database height={32} width={32} className="fill-yellow-400" />}

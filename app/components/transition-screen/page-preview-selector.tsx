@@ -24,14 +24,7 @@ export default function PagePreviewSelector({
             : `translateX(calc(${animationIndex * 100}% + ${animationIndex * 0.5}rem))`,
       }}
     >
-      <div
-        className={`aspect-video overflow-hidden rounded-lg transition-all duration-500`}
-      ></div>
-      <p
-        className={`mt-2 truncate text-center text-[0.65rem] transition-colors sm:text-xs text-transparent`}
-      >
-        hidden
-      </p>
+      <div className="aspect-video overflow-hidden rounded-lg" />
     </div>
   );
 }

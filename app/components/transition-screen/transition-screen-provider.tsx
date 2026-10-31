@@ -71,22 +71,18 @@ export function TransitionScreenProvider({
             <PagePreview
               label="Strona główna"
               selected={page.targetIndex === 0}
-              imgPath="/pages/home.png"
             />
             <PagePreview
               label="Projekty"
               selected={page.targetIndex === 1}
-              imgPath="/pages/home.png"
             />
             <PagePreview
               label="O mnie"
               selected={page.targetIndex === 2}
-              imgPath="/pages/about.png"
             />
             <PagePreview
               label="Kontakt"
               selected={page.targetIndex === 3}
-              imgPath="/pages/contact.png"
             />
           </div>
         </div>
