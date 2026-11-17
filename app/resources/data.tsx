@@ -31,6 +31,7 @@ export const projectsDatabase = [
     title: "Aplikacja fitness",
     description: "stworzona do śledzenia treningów, planów i postępów.",
     githubHref: "https://github.com/M0lej/flutter_fitness_app",
+    demoHref: "https://molejfitnessapp.netlify.app/",
     imgPath: "/fitness_app.png",
     tags: ["Flutter", "Dart", "Hive"],
     tagsIcons: [
