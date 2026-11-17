@@ -46,6 +46,7 @@ export const projectsDatabase = [
     description:
       "Mobilna aplikacja pogodowa we Flutterze prezentująca aktualną pogodę, prognozę godzinową i 7-dniową oraz szczegółowe dane pogodowe dla wybranej lokalizacji.",
     githubHref: "https://github.com/M0lej/flutter_weather_app",
+    demoHref: "https://molejweatherapp.netlify.app/",
     imgPath: "/weather_app.png",
     tags: ["Flutter", "Dart", "Hive"],
     tagsIcons: [
